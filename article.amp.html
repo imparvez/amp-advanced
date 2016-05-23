@@ -53,6 +53,11 @@
       }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!--Required for AMP Videos-->
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+
+    <!--Required for Amp Twitter-->
+    <script async custom-element="amp-twitter" src="https://cdn.ampproject.org/v0/amp-twitter-0.1.js"></script>
     <script type="application/ld+json">
     {
      "@context": "http://schema.org",
@@ -101,10 +106,6 @@
       type="doubleclick"
       data-slot="/35096353/amptesting/image/static">
     </amp-ad>
-    <!--type attribute, this attribute informs the amp-ad component of which ad platform you want to use-->
-    <!---Any attributes starting with data- in amp-ad are vendor specific attributes.-->
-
-
     <amp-ad
       width="300"
       height="250"
@@ -113,9 +114,6 @@
       data-aax_pubname="test123"
       data-aax_src="302">
     </amp-ad>
-
-
-
     <amp-ad
       width="300"
       height="250"
@@ -123,7 +121,6 @@
       data-slot="/35096353/amptesting/geo/uk">
       <div fallback>No ad appeared because you're not browsing from the UK!</div>
     </amp-ad>
-
     <amp-ad
       width="300"
       height="250"
@@ -131,6 +128,30 @@
       data-slot="/35096353/amptesting/geo/us">
       <div fallback>No ad appeared because you're not browsing from the US!</div>
     </amp-ad>
+    <!--type attribute, this attribute informs the amp-ad component of which ad platform you want to use-->
+    <!---Any attributes starting with data- in amp-ad are vendor specific attributes.-->
+
+
+    
+
+    <!--AMP Youtube Embed Videos-->
+    <amp-youtube
+      data-videoid="B08iLAtS3AQ"
+      layout="responsive"
+      width="480"
+      height="270">
+      <div fallback>
+        <p>The video could not be loaded.</p>
+      </div>
+    </amp-youtube>
+
+    <!--AMP Videos-->
+    <amp-twitter
+      width="250"
+      height="250"
+      layout="responsive"
+      data-tweetid="638793490521001985">
+    </amp-twitter>
     <article>
       <h1>Article Name</h1>
 
