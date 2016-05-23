@@ -51,6 +51,10 @@
         padding: 0.5em;
         margin: 0.5em;
       }
+
+      amp-fit-text {
+        white-space: normal;
+      }
     </style>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <!--Required for AMP Videos-->
@@ -61,6 +65,9 @@
 
     <!--AMP FIT TEXT-->
     <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+
+    <!--CAROUSEL COMPONENT-->
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
 
     <script type="application/ld+json">
     {
@@ -103,7 +110,12 @@
     </header>
     <!--All Ads in amp pages are constructued using amp-ad component-->
     <!--Configuration can be done in several ways like WIDTH, HEIGHT, LAYOUT MODE etc-->
-
+    <amp-carousel layout="responsive" width="300" height="168" 
+         type="slides" autoplay delay="2000" loop>
+      <amp-img src="mountains-1.jpg" width="300" height="168" layout="responsive"></amp-img>
+      <amp-img src="mountains-2.jpg" width="300" height="168" layout="responsive"></amp-img>
+      <amp-img src="mountains-3.jpg" width="300" height="168" layout="responsive"></amp-img>
+    </amp-carousel>
     <amp-ad
       width="300"
       height="250"
@@ -170,6 +182,20 @@
       <amp-fit-text width="400" height="75" layout="responsive" max-font-size="42">
         #YOLO
       </amp-fit-text>
+
+      <amp-carousel layout="fixed-height" height="250" type="carousel" >
+        <amp-img src="blocky-mountains-1.jpg" width="300" height="250"></amp-img>
+
+        <amp-ad width="300" height="250"
+          type="doubleclick"
+          data-slot="/35096353/amptesting/image/static">
+            <div placeholder>This advert is still loading.</div>
+        </amp-ad>
+
+        <amp-fit-text width="300" height="250" layout="fixed">
+            Big, bold article quote goes here.
+        </amp-fit-text>
+    </amp-carousel>
     </article>
   </body>
 </html>
